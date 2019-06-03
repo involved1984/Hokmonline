@@ -39,6 +39,11 @@
     <plugin name="cordova-plugin-network-information"/>
     <plugin name="cordova-plugin-vibration"/>
     <plugin name="cordova-plugin-media"/>
+        
+        
+    <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+        <param name="URL_SCHEME" value="hokmonline" />
+    </gap:plugin>
 
     <!-- Define app icon and splashscreen for each platform. -->
     <platform name="android">
