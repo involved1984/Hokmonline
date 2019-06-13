@@ -45,5 +45,22 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+    
+    function handleOpenURL(url) {
+      setTimeout(function() {
+        alert("received url: " + url);
+      }, 0);
     }
+    
+    
+    
+    
 };
+
+
+function handleOpenURL(url) {
+  setTimeout(function() {
+    alert("received url outside: " + url);
+  }, 0);
+}
