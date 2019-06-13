@@ -50,7 +50,7 @@ var app = {
         console.log('Received Event: ' + id);
     },
     
-    function handleOpenURL(url) {
+    handleOpenURL: function(url) {
       setTimeout(function() {
         alert("received url: " + url);
       }, 0);
