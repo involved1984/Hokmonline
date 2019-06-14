@@ -44,7 +44,7 @@
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
         <param name="URL_SCHEME" value="hokmonline" />
     </gap:plugin>
-    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.4.0" />
 
     <!-- Define app icon and splashscreen for each platform. -->
     <platform name="android">
