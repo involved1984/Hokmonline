@@ -45,7 +45,16 @@
         <param name="URL_SCHEME" value="hokmonline" />
     </gap:plugin>
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.4.0" />
-
+    
+        
+        
+    <plugin name="cordova-plugin-facebook4" source="npm">
+        <param name="APP_ID" value="304859833790590" />
+        <param name="APP_NAME" value="HokmOnline" />
+    </plugin>
+        
+        
+        
     <!-- Define app icon and splashscreen for each platform. -->
     <platform name="android">
         <icon   src="res/icon.png" />
