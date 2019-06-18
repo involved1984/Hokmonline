@@ -21,7 +21,8 @@
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="DisallowOverscroll"         value="true" />
-        
+    <preference name="android-minSdkVersion"      value="15" />             <!-- android: API level 15 is Android 4.0.3, ICE_CREAM_SANDWICH_MR1. MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-targetSdkVersion"   value="15" />             <!-- To hide the "..." (overflow menu) on Android, see http://stackoverflow.com/questions/20375626/disabling-android-menu-button-in-phonegap-build -->
         
 
     <!-- Define a specific version of PhoneGap to build into your app. -->
