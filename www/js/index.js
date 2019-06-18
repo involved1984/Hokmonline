@@ -71,11 +71,11 @@ function shareUrl(urlToShare){
 
 
 function fbLogin(){
-    facebookConnectPlugin.logout(fbLoginSuccess, fbLoginFail);
+    facebookConnectPlugin.login(['email'], fbLoginSuccess, fbLoginFail);
 }
 function fbLoginSuccess(e){
-    
+    ducument.getElementById('resultHTML').innerHTML = JSON.stringify(e);
 }
 function fbLoginFail(e){
-    
+    ducument.getElementById('resultHTML').innerHTML = 'FB login failed';
 }
