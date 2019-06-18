@@ -19,9 +19,6 @@ if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
 
 
 
-
-
-
 var app = {
     initialize: function() {
         this.bindEvents();
