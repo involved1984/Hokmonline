@@ -55,3 +55,27 @@ function handleOpenURL(url) {
     alert("received url outside: " + url);
   }, 0);
 }
+
+
+function shareUrl(urlToShare){
+    window.plugins.socialsharing.shareWithOptions(
+        {
+            url:urlToShare
+        }, 
+        function(){}, 
+        function(){}
+    );
+}
+
+
+
+
+function fbLogin(){
+    facebookConnectPlugin.logout(fbLoginSuccess, fbLoginFail);
+}
+function fbLoginSuccess(e){
+    
+}
+function fbLoginFail(e){
+    
+}
