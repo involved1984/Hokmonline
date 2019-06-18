@@ -89,9 +89,7 @@ function showAds(){
      id: 'ca-app-pub-2837280352619539~1949518178',
     })
 
-    // Create banner
     admob.banner.prepare()
 
-    // Show the banner
     admob.banner.show()
 }
