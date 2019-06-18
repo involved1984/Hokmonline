@@ -48,10 +48,10 @@
     
         
         
-    <!--plugin name="cordova-plugin-facebook4" source="npm"  spec="1.7.4">
+    <plugin name="cordova-plugin-facebook4" source="npm">
         <param name="APP_ID" value="304859833790590" />
         <param name="APP_NAME" value="HokmOnline" />
-    </plugin-->
+    </plugin>
         
         
         
