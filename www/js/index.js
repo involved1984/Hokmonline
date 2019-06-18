@@ -78,5 +78,5 @@ function fbLoginSuccess(e){
     document.getElementById('resultHTML').innerHTML = JSON.stringify(e);
 }
 function fbLoginFail(e){
-    document.getElementById('resultHTML').innerHTML = 'FB login failed';
+    document.getElementById('resultHTML').innerHTML = 'FB login failed: ' + JSON.stringify(e);
 }
