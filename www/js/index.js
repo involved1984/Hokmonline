@@ -34,6 +34,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        
+        showAds();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -79,4 +81,17 @@ function fbLoginSuccess(e){
 }
 function fbLoginFail(e){
     document.getElementById('resultHTML').innerHTML = 'FB login failed: ' + JSON.stringify(e);
+}
+
+
+function showAds(){
+    admob.banner.config({
+     id: 'ca-app-pub-2837280352619539~1949518178',
+    })
+
+    // Create banner
+    admob.banner.prepare()
+
+    // Show the banner
+    admob.banner.show()
 }
