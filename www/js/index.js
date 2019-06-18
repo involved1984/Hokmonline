@@ -38,6 +38,7 @@ var app = {
             autoShow: true
         })
         admob.banner.prepare();
+        admob.banner.show()
     },
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
