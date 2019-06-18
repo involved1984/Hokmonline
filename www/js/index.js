@@ -32,13 +32,15 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         
+        document.getElementById('resultHTML').innerHTML = 'Showing banner ad...';
+      
         admob.banner.config({
-            id: admobid.banner,
+            id: 'ca-app-pub-2837280352619539~1949518178',
             isTesting: true,
             autoShow: true
         })
         admob.banner.prepare();
-        admob.banner.show()
+        admob.banner.show();
     },
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
