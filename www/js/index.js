@@ -33,12 +33,31 @@ var app = {
         document.getElementById('resultHTML').innerHTML = 'Showing banner ad...';
       
         admob.banner.config({
-            id: 'ca-app-pub-2837280352619539~1949518178',
+            id: 'ca-app-pub-2837280352619539/7488607703',
             isTesting: true,
             autoShow: true
         })
         admob.banner.prepare();
         admob.banner.show();
+      
+      
+      
+        // Set AdMobAds options:
+        /*admob.setOptions({
+          publisherId:          "ca-app-pub-2837280352619539/7488607703",  // Required
+          interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
+          tappxIdiOS:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional
+          tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
+          tappxShare:           0.5                                        // Optional
+        });
+
+        // Start showing banners (atomatic when autoShowBanner is set to true)
+        admob.createBannerView();*/
+      
+      
+      
+      
+      
     },
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
