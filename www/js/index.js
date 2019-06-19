@@ -80,3 +80,4 @@ var app = {
     }
     
 };
+app.initialize();
