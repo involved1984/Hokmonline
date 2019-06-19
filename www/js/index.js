@@ -34,7 +34,7 @@ var app = {
       
         admob.banner.config({
             id: admobid.banner,
-            isTesting: true,
+            isTesting: false,
             autoShow: true
         })
         admob.banner.prepare();
@@ -96,7 +96,8 @@ function fbLoginFail(e){
 function showInterstitialAd(){
   document.getElementById('resultHTML').innerHTML = 'Showing big ad... ';
   admob.interstitial.config({
-   id: admobid.interstitial,
+    id: admobid.interstitial,
+    isTesting: false
   })
 
   admob.interstitial.prepare()
