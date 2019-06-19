@@ -27,6 +27,7 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     onDeviceReady: function() {
+        console.log('Testing console');
         app.receivedEvent('deviceready');
         
         document.getElementById('resultHTML').innerHTML = 'Showing banner ad...';
