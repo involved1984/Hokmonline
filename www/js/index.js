@@ -1,7 +1,7 @@
 var admobid = {}
 if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
   admobid = {
-    banner: 'ca-app-pub-2837280352619539~1949518178',
+    banner: 'ca-app-pub-2837280352619539/7488607703',
     interstitial: '',
   }
 } else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {  // for ios
