@@ -2,7 +2,7 @@ var admobid = {}
 if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
   admobid = {
     banner: 'ca-app-pub-2837280352619539/7488607703',
-    interstitial: '',
+    interstitial: 'ca-app-pub-2837280352619539/7259299573',
   }
 } else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {  // for ios
   admobid = {
@@ -94,9 +94,9 @@ function fbLoginFail(e){
 
 
 function showInterstitialAd(){
-
+  document.getElementById('resultHTML').innerHTML = 'Showing big ad... ';
   admob.interstitial.config({
-   id: 'ca-app-pub-2837280352619539/7259299573',
+   id: admobid.interstitial,
   })
 
   admob.interstitial.prepare()
