@@ -93,3 +93,14 @@ function fbLoginFail(e){
 
 
 
+function showInterstitialAd(){
+
+  admob.interstitial.config({
+   id: 'ca-app-pub-2837280352619539/7259299573',
+  })
+
+  admob.interstitial.prepare()
+
+  admob.interstitial.show()
+  
+}
