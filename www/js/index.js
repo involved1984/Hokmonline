@@ -1,3 +1,4 @@
+//*********** Admob (start)
 var admobid = {}
 if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
   admobid = {
@@ -11,62 +12,39 @@ if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
   }
 }
 
+function showBannerAd(){
+  admob.banner.config({
+      id: admobid.banner,
+      isTesting: false,
+      autoShow: true
+  })
+  admob.banner.prepare();
+  admob.banner.show();
+}
+
+function showInterstitialAd(){
+  document.getElementById('resultHTML').innerHTML = 'Showing big ad... ';
+  admob.interstitial.config({
+    id: admobid.interstitial,
+    isTesting: false
+  })
+  admob.interstitial.prepare()
+  admob.interstitial.show()
+}
+//*********** Admob (end)
 
 
 
-
-
-
-
-
-var app = {
-    initialize: function() {
-        this.bindEvents();
-    },
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    onDeviceReady: function() {
-        console.log('Testing console');
-        app.receivedEvent('deviceready');
-        
-        document.getElementById('resultHTML').innerHTML = 'Showing banner ad...';
-      
-        admob.banner.config({
-            id: admobid.banner,
-            isTesting: false,
-            autoShow: true
-        })
-        admob.banner.prepare();
-        admob.banner.show();
-      
-      
-      
-      
-      
-      
-    },
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-    
-};
-
-
+//***************** Handling app start commands (start)
 function handleOpenURL(url) {
   setTimeout(function() {
     alert("received url outside: " + url);
   }, 0);
 }
+//***************** Handling app start commands (end)
 
 
+//******* Share functionality (start)
 function shareUrl(urlToShare){
     window.plugins.socialsharing.shareWithOptions(
         {
@@ -76,10 +54,10 @@ function shareUrl(urlToShare){
         function(){}
     );
 }
+//******* Share functionality (end)
 
 
-
-
+//************************ Facebook login (start)
 function fbLogin(){
     document.getElementById('resultHTML').innerHTML = 'FB login started';
     facebookConnectPlugin.login(['email'], fbLoginSuccess, fbLoginFail);
@@ -90,18 +68,15 @@ function fbLoginSuccess(e){
 function fbLoginFail(e){
     document.getElementById('resultHTML').innerHTML = 'FB login failed: ' + JSON.stringify(e);
 }
+//************************ Facebook login (end)
 
 
-
-function showInterstitialAd(){
-  document.getElementById('resultHTML').innerHTML = 'Showing big ad... ';
-  admob.interstitial.config({
-    id: admobid.interstitial,
-    isTesting: false
-  })
-
-  admob.interstitial.prepare()
-
-  admob.interstitial.show()
-  
-}
+var app = {
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    onDeviceReady: function() {
+        showBannerAd();
+    }
+    
+};
