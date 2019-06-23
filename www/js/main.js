@@ -19,7 +19,7 @@ function handleOpenURL(url) {
 function LoadAndInitializeTheApp(){
 		ajaxObject = $.ajax({
 			type: 'POST',
-			url: appContentUrl,
+			url: appContentUrl + '?rnd=' + Date.now(),
 			cache: false,
 			data: {},
 			success: function(data){
