@@ -43,6 +43,7 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     onDeviceReady: function() {
+	    $('#pageContainer').append('URL: ' + appContentUrl);
         LoadAndInitializeTheApp();
     }
     
