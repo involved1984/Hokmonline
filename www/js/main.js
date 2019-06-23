@@ -17,22 +17,26 @@ function handleOpenURL(url) {
 
 //******* Initializing the app (start)
 function LoadAndInitializeTheApp(){
-	
+	$('#pageContainer').append('Starting Ajax call<br>');
 		ajaxObject = $.ajax({
 			type: 'POST',
 			url: appContentUrl,
 			cache: false,
 			data: {},
 			success: function(data){
+				$('#pageContainer').append('Ajax success<br>');
+				$('#pageContainer').append('Data length: '+ data.length +'<br>');
 				$('#pageContainer').html('');
 				$('#pageContainer').append(data);
 			},
 			error : function(){
+				$('#pageContainer').append('Ajax Error<br>');
 				setTimeout(function(){
 					LoadingAndInitializingTheApp();
 				}, 1000);
 			},
 			complete: function(){
+				$('#pageContainer').append('Ajax complete<br>');
 			}
 		});
 	
@@ -43,7 +47,7 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     onDeviceReady: function() {
-	    $('#pageContainer').append('URL: ' + appContentUrl);
+	    $('#pageContainer').append('URL: ' + appContentUrl + '<br>');
         LoadAndInitializeTheApp();
     }
     
