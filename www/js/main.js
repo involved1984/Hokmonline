@@ -1,9 +1,21 @@
+//**** Setting server URL (start)
 var appContentUrl = 'http://www.kaarbar.com/hokmonline/app_content/game.php';
 if (window.location.href.indexOf('localhost') > 0){
 	appContentUrl = '../server/app_content/game.php';
 }
+//**** Setting server URL (end)
 
 
+//***************** Handling app start commands (start)
+var initUrl = '';
+function handleOpenURL(url) {
+	initUrl = url;
+}
+//***************** Handling app start commands (end)
+
+
+
+//******* Initializing the app (start)
 function LoadAndInitializeTheApp(){
 	
 		ajaxObject = $.ajax({
@@ -25,6 +37,15 @@ function LoadAndInitializeTheApp(){
 		});
 	
 }
-setTimeout(function(){
-	LoadAndInitializeTheApp();
-}, 300);
+
+var app = {
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    onDeviceReady: function() {
+        LoadAndInitializeTheApp();
+    }
+    
+};
+app.initialize();
+//******* Initializing the app (end)
