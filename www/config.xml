@@ -60,20 +60,20 @@
         
         
         
-    <gap:plugin name="cordova-plugin-admob-free" source="npm">
+    <!--gap:plugin name="cordova-plugin-admob-free" source="npm">
         <param name="ADMOB_APP_ID" value="ca-app-pub-2837280352619539~1949518178" />
     </gap:plugin>
     <plugin name="cordova-admob-sdk">
         <variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
-    </plugin>
+    </plugin-->
     <!--gap:plugin name="phonegap-admob" source="npm"/--> 
         
         
         
         
-    <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+    <!--gap:plugin name="cordova-plugin-customurlscheme" source="npm">
         <param name="URL_SCHEME" value="hokmonline" />
-    </gap:plugin>
+    </gap:plugin-->
         
         
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.4.0" />
