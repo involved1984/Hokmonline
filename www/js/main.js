@@ -1,8 +1,5 @@
 //**** Setting server URL (start)
 var appContentUrl = 'http://www.kaarbar.com/hokmonline/server/app_content/game.php';
-/*if (window.location.href.indexOf('localhost') > 0){
-	appContentUrl = '../server/app_content/game.php';
-}*/
 //**** Setting server URL (end)
 
 
