@@ -14,21 +14,18 @@ function handleOpenURL(url) {
 
 //******* Initializing the app (start)
 function LoadAndInitializeTheApp(){
-		alert('Fetching data started...');
 		ajaxObject = $.ajax({
 			type: 'POST',
 			url: appContentUrl + '?rnd=' + Date.now(),
 			cache: false,
 			data: {},
 			success: function(data){
-				alert('Data is received');
 				$('#pageContainer').append('Ajax success<br>');
 				$('#pageContainer').append('Data length: '+ data.length +'<br>');
 				$('#pageContainer').html('');
 				$('#pageContainer').append(data);
 			},
 			error : function(){
-				alert('Error fetching data');
 				setTimeout(function(){
 					LoadingAndInitializingTheApp();
 				}, 1000);
