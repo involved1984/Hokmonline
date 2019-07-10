@@ -115,7 +115,9 @@
 	<config-file parent="GADIsAdManagerApp" platform="ios" target="*-Info.plist">
             <true />
         </config-file>
-	    
+	<config-file target="*-Info.plist" parent="GADApplicationIdentifier">
+    		<string>ca-app-pub-2837280352619539~5924188091</string>
+	</config-file>
 	    
 	    
         <icon   src="res/icon/ios/icon.png"                         platform="ios" width="57"   height="57" />
