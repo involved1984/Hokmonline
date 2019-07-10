@@ -66,7 +66,7 @@
         <param name="ADMOB_APP_ID" value="ca-app-pub-2837280352619539~1949518178" />
     </gap:plugin>
     <plugin name="cordova-admob-sdk">
-        <variable name="PLAY_SERVICES_VERSION" value="18.1.0" />
+        <variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
     </plugin>
     <!--gap:plugin name="phonegap-admob" source="npm"/--> 
         
