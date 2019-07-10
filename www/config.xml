@@ -4,8 +4,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.hokmonline.app"
-	versionCode	        = "1000052"
-        ios-CFBundleVersion     = "1000052"
+	versionCode	        = "1000053"
+        ios-CFBundleVersion     = "1000053"
         version   = "1.0.5">
 
     <name>Hokm - Online</name>
@@ -66,16 +66,16 @@
         <param name="ADMOB_APP_ID" value="ca-app-pub-2837280352619539~1949518178" />
     </gap:plugin>
     <plugin name="cordova-admob-sdk">
-        <variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
+        <variable name="PLAY_SERVICES_VERSION" value="18.1.0" />
     </plugin>
     <!--gap:plugin name="phonegap-admob" source="npm"/--> 
         
         
         
         
-    <!--gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+    <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
         <param name="URL_SCHEME" value="hokmonline" />
-    </gap:plugin-->
+    </gap:plugin>
         
         
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.4.0" />
