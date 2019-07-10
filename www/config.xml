@@ -148,6 +148,10 @@
 		<string>Uplating player location</string>
         </edit-config>
 
+	    
+	<config-file target="*-Info.plist" parent="GADApplicationIdentifier">
+    		<string>ca-app-pub-2837280352619539~5924188091</string>
+	</config-file>
     </platform>
 
     <!--platform name="wp8">
