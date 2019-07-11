@@ -1,3 +1,33 @@
+//*** Detecting platform (start)
+var platform = '';
+if (window.location.href.indexOf('platform=web') > 0){
+	platform = 'web';
+} else if (/(android)/i.test(navigator.userAgent)) {
+	platform = 'android';
+} else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+	platform = 'ios';
+}
+//*** Detecting platform (end)
+
+//******************************* Admob ads settings (start)
+var admobid = {};
+if (platform == 'android') {
+  admobid = {
+    banner: 'ca-app-pub-2837280352619539/7488607703',
+    interstitial: 'ca-app-pub-2837280352619539/7259299573',
+	reward: 'ca-app-pub-2837280352619539/2281113094'
+  };
+} else if (platform == 'ios') {
+  admobid = {
+    banner: 'ca-app-pub-2837280352619539/6854126381',
+    interstitial: 'ca-app-pub-2837280352619539/1706398022',
+	reward: 'ca-app-pub-2837280352619539/7087072433'
+  };
+}
+//******************************* Admob ads settings (end)
+
+
+
 //**** Setting server URL (start)
 var appContentUrl = 'http://www.kaarbar.com/hokmonline/server/app_content/game.php';
 //**** Setting server URL (end)
