@@ -4,8 +4,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.hokmonline.app"
-	versionCode	        = "1000069"
-        ios-CFBundleVersion     = "1000069"
+	versionCode	        = "1000070"
+        ios-CFBundleVersion     = "1000070"
         version   = "1.0.6">
 
     <name>Hokm - Online</name>
