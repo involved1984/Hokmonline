@@ -48,21 +48,23 @@
     <!--plugin name="cordova-plugin-battery-status"/-->
     <!--plugin name="cordova-plugin-camera"/-->
     <!--plugin name="cordova-plugin-media-capture"/-->
-    <plugin name="cordova-plugin-device"/>
     <!--plugin name="cordova-plugin-dialogs"/-->
     <!--plugin name="cordova-plugin-file"/-->
-    <plugin name="cordova-plugin-geolocation"/>
     <!--plugin name="cordova-plugin-globalization"/-->
-    <plugin name="cordova-plugin-inappbrowser"/>
     <!--plugin name="cordova-plugin-network-information"/-->
-    <plugin name="cordova-plugin-vibration"/>
     <!--plugin name="cordova-plugin-media"/-->
+	
+<!--
+    <plugin name="cordova-plugin-geolocation"/>
+    <plugin name="cordova-plugin-inappbrowser"/>
     <plugin name="cordova-plugin-whitelist"/>
     <plugin name="cordova-plugin-insomnia" />
+    <plugin name="cordova-plugin-device"/>
+    <plugin name="cordova-plugin-vibration"/>
 	
 	<plugin     spec="https://github.com/involved1984/my-phonegap-audio.git"  source="git"/>
         
-        
+-->    
         
     <gap:plugin name="cordova-plugin-admob-free" source="npm">
         <param name="ADMOB_APP_ID" value="ca-app-pub-2837280352619539~1949518178" />
